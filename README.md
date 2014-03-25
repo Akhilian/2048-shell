@@ -2,9 +2,11 @@
 ==========
 
 2048-shell is a bash-based version of the 2048 game.
+
 Enjoy this game, even in the most basic interface possible.
 
 Authors
 --------
-Simon RENOULT (@G4llic4)
-Adrien SAUNIER (@alwinfr)
+Simon RENOULT ([@G4llic4](http://twitter.com/g4llic4))
+
+Adrien SAUNIER ([@alwinfr](http://twitter.com/alwinfr))
