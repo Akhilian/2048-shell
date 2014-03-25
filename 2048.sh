@@ -1,3 +1,9 @@
-echo "-------------------------------"
-echo "---------- 2048 Game ----------\n\n"
-echo "-------------------------------"
+#!/bin/bash
+source Display.sh
+source UserInput.sh
+source Game.sh
+
+#We display the first menu
+welcome
+start_menu
+input_menu
