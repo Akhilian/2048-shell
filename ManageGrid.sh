@@ -1,15 +1,26 @@
 #!/bin/bash
 
-empty_grid="0-0-0-0|0-0-0-0|0-0-0-0|0-0-0-0"
+generate_new_grid () {
 
-generate_empty_grid () {
+    tiles=2
 
-	if [ -z $1 ]; then
-		echo 'No grid specified, exit.'
-		exit 
-	else
-		$empty_grid > $1
-	fi
+    for y in 1 2 3 4
+    do
+        for x in 1 2 3 4
+        do
+            table[$x$y]=0
+        done
+    done
+
+    while [[ $tiles > 0 ]]
+    do
+
+        index=(($RANDOM%4))
+
+        echo $index
+
+        (( tiles-- ))
+    done
 }
 
 get_grid_as_string () {
@@ -21,8 +32,3 @@ get_grid_as_string () {
 		return $grid
 	fi
 }
-
-# generate_empty_grid
-# generate_empty_grid 4x4.grid
-
-get_grid_as_string 4x4.grid

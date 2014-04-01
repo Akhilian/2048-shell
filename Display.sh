@@ -23,20 +23,25 @@ display_help() {
 
 display_grid() {
 
-    if [ -z $1 ]; then
-        echo "No string specified.";
-        exit
-    else
-        string=$1
-        while test -n "$string"; do
-            c=${string:0:1}
+    display_string=""
 
-            
+    for x in 1 2 3 4
+    do
+        for y in 1 2 3 4
+        do
+            c=${table[$x$y]}
 
-            # Removing the first character of the string
-            string=${string:1}
+            if [[ $y == 4 ]]
+            then
+                display_string=$display_string$c"\n"
+            else
+                display_string=$display_string$c" "
+            fi
         done
-    fi
+    done
+
+    echo -e $display_string
+
 
 }
 

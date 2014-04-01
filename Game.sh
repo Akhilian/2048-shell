@@ -2,11 +2,13 @@
 
 start_game() {
 
-    echo "Let's start that game !! \n Good luck."
+    echo -e "Let's start that game !! \nGood luck."
+
+    generate_new_grid
 
     while true; do
         clear
-        echo "Display the table"
+        display_grid
         input_game
         key=$?
     done
